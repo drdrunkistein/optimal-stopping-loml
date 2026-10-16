@@ -21,7 +21,7 @@ st.caption(
 with st.sidebar:
     st.header("1. Timeline & Exposure Priors")
     a_min = st.slider("Age Started Dating (A_min)", 14, 30, 16)
-    a_peak = st.slider("Peak Social Exposure Age", a_min + 1, 32, max(a_min+1,21)
+    a_peak = st.slider("Peak Social Exposure Age", a_min + 1, 32, max(a_min+1,21))
     current_age = st.slider("Current Age", a_min , 35, max(a_min, 22))  
     a_max = st.slider("Target Settling Age (A_max)", a_peak+1, 40, max(a_peak+1,27))
 
