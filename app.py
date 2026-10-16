@@ -20,10 +20,10 @@ st.caption(
 # --- Sidebar Inputs ---
 with st.sidebar:
     st.header("1. Timeline & Exposure Priors")
-    a_min = st.slider("Age Started Dating (A_min)", 14, 22, 16)
-    current_age = st.slider("Current Age", a_min + 1, 35, 22)
-    a_max = st.slider("Target Settling Age (A_max)", max(current_age + 1, 24), 40, 27)
-    a_peak = st.slider("Peak Social Exposure Age", a_min + 1, a_max - 1, 21)
+    a_min = st.slider("Age Started Dating (A_min)", 14, 30, 16)
+    a_peak = st.slider("Peak Social Exposure Age", a_min + 1, 32, max(a_min+1,21)
+    current_age = st.slider("Current Age", a_min , 35, max(a_min, 22))  
+    a_max = st.slider("Target Settling Age (A_max)", a_peak+1, 40, max(a_peak+1,27))
 
     st.header("2. Candidate Counts")
     n_past = st.number_input("Serious Past Candidates (n_past)", min_value=1, max_value=15, value=1)
@@ -159,4 +159,4 @@ with right_col:
         yaxis_range=[0, 100],
         height=380,
     )
-    st.plotly_chart(fig_bell, use_container_width=True)
+    st.plotly_chart(fig_bell, use_container_width=True) 
